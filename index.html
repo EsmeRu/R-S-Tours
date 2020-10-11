@@ -6,40 +6,52 @@
     <title>R&S TOURS</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     
 </head>
 <body>
-    <header>
-        <div class="contenedor">
-            <div class="logo">
-
+    <header class="header-container center">
+        <div class="logo-container p-1">
+            <div class="img-c">
+                <img src="img/logo.png" alt="">
             </div>
-            <div class="nav-contenedor">
-                <nav>
-                    <a href="index.html" class="nav">INICIO</a>
-                    <a href="tours.html" class="nav">TOURS</a>
-                    <a href="contacto.html" class="nav">CONTACTO</a>
-                    <a href="galeria.html" class="nav">GALERIA</a>
-                    <a href="nosotros.html" class="nav">NOSOTROS</a>
-                </nav>
-            </div>
+            <!-- <div class="r-social">
+                <a href="https://www.facebook.com/" target="_blank" class="fb fab fa-facebook-square"></a>
+                <a href="https://twitter.com/" target="_blank" class="tw fab fa-twitter-square"></a>
+            </div> -->
+        </div>
+        <div class="nav-container" id="navHeader">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav">Inicio</a></li>
+                    <li><a href="tours.html" class="nav">Tours</a></li>
+                    <li><a href="contacto.html" class="nav">Contacto</a></li>
+                    <li><a href="galeria.html" class="nav">Galeria</a></li>
+                    <li><a href="nosotros.html" class="nav">Nosotros</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
     <!-- CONTENEDOR DEL BANNER -->
-    <div class="contenedor banner-contenedor">
-        <div class="desc-contenedor">
+    <div class="banner-container">
+        <div class="center desc-container">
             <h1>ISLA ESPIRITU SANTO</h1>
-            <p>La Isla Espíritu Santo, es Patrimonio Natural Mundial de la Humanidad de la UNESCO desde 2005 y Parque nacional desde 2007.</p>
+            <p>Patrimonio Natural de la Humanidad según UNESCO desde 2005 y Parque nacional desde 2007.</p>
         </div>
         <div class="banner">
-            <img src="img/banner.jpg" alt="">
+            <img class="mySlides" src="img/banner.jpg">
+            <img class="mySlides" src="img/banner2.jpg">
+            <img class="mySlides" src="img/banner3.jpg">
         </div>
     </div>
     <!-- FIN DEL BANNER -->
+
     <main>
         <!-- INFORMACIÓN SOBRE LA ISLA -->
-        <div class="contenedor info-contenedor">
+        <div class="center info-container">
             <div class="info-isla">
                 <img src="img/desc1.jpg" alt="">
                 <p>En la isla podrás realizar distintas actividades, entre ellas Kayak, Pesca deportiva, 
@@ -59,11 +71,11 @@
         <!-- FIN INFORMACIÓN SOBRE LA ISLA -->
 
         <!-- OFERTAS DE TOURS -->
-        <div class="contenedor">
+        <div class="center">
             <div class="ofertas-titulo">
                 <h2>CONOCE NUESTRAS OFERTAS</h2>
             </div>
-            <div class="ofertas-contenedor">
+            <div class="ofertas-container">
                 <div class="tour">
                     <img src="" alt="">
                     <div class="contenido-tour">
@@ -153,5 +165,6 @@
             </ul>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
