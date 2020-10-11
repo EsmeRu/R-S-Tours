@@ -1,4 +1,5 @@
 /* HEADER - BARRA DE NAVEGACIÓN */
+// POSISIÓN FIJADA
 window.onscroll = function() {navFunction()};
 
 const header = document.getElementById("navHeader");
