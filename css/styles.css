@@ -170,6 +170,18 @@ ul{
     background-color: white;
     background-image: url("../img/punta-baja-tours.jpg");
 }
+.tour-4 {
+    background-color: white;
+    background-image: url("../img/tuna-tuna-tours.jpg");
+}
+.tour-5 {
+    background-color: white;
+    background-image: url("../img/baja-des-tours.jpg");
+}
+.tour-6 {
+    background-color: white;
+    background-image: url("../img/sun-rider-tours.jpg");
+}
 .titulo-tour-container {
     width: 100%;
     display: flex;
@@ -251,7 +263,17 @@ ul{
 .r-social li:nth-child(2){
      margin: 0 1rem;
 }
- .r-social a:hover{
+.r-social a:hover{
      color: #000000;
 }
 
+/*Styles per tour*/
+.main-tour-container {
+    width: 100%;
+    background-color: white;
+    background-image: url("../img/tours.jpg");
+}
+
+.title-tour {
+    font-family: 'Chilanka', cursive;
+}
