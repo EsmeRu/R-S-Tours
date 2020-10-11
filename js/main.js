@@ -12,6 +12,7 @@ function navFunction() {
     header.classList.remove("sticky");
   }
 }
+
 /* BANNER */
 var myIndex = 0;
 carousel();

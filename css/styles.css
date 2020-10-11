@@ -8,7 +8,7 @@ html{
 body {
     margin: 0 auto;
     background-color: #EEEEEE; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Stylish', sans-serif;
     line-height: 1.7rem;
     overflow-x: hidden;
 }
@@ -23,6 +23,18 @@ a{
 }
 ul{
     list-style-type: none;
+}
+h2{
+    background-color: #3f67ad75;
+    color: white;
+    margin: 0;
+    padding: 1.8em 1.5em 1.5em;
+}
+h1{
+    font-size: 3rem;
+    padding: 3rem;
+    font-weight: 900;  
+    margin: 0;
 }
 /* GLOBALES */
 .center{
@@ -100,8 +112,8 @@ ul{
     margin: 0 auto;
 }
 .desc-container h1{
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    padding: 0;
     align-self: center;
 }
 .banner{
@@ -123,6 +135,7 @@ ul{
 .info-isla{
     flex: 1 0 calc(30% - 3rem);
     padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
     /* min-width: 50%; agregar a mos media q */
 }
 .info-isla img{
@@ -136,13 +149,6 @@ ul{
     margin-top: -3.5vh;
     background-color: #86acee3a;
     font-family: 'Chilanka', cursive;
-}
-.offers-title {
-    font-family: 'Satisfy', cursive;
-    background-color: #3F68AD;
-    color: white;
-    margin-top: 0.5em 0;
-    padding: 0.5em;
 }
 .offers-container {
     display: flex;
@@ -255,3 +261,44 @@ ul{
      color: #000000;
 }
 
+
+/* NOSOTROS */
+.profile-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 2rem;
+}
+.profile{
+    flex: 0 0 calc(30%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 1vw 3vw;
+}
+.profile:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+.profile img{
+    border-radius: 50%;
+    width: 15vw;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../img/punta-baja-tours.jpg");
+    min-height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1c4153;
+}
+  .company-info{
+      width: 50vw;
+      background-color: #ffd93252;
+      padding: 3rem;
+      color: #000000;
+      font-weight: bold;
+      border-radius: 20px 100px;
+}
