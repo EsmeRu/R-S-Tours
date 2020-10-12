@@ -172,13 +172,25 @@ h1{
     background-color: white;
     background-image: url("../img/choya-tour.jpg");
 }
+.tour-2-v2{
+    background-color: white;
+    background-image: url("../img/choya-tour-2.jpg");
+}
 .tour-3 {
     background-color: white;
     background-image: url("../img/punta-baja-tours.jpg");
 }
+.tour-3-v2{
+    background-color: white;
+    background-image: url("../img/punta-baja-tours-2.jpg");
+}
 .tour-4 {
     background-color: white;
     background-image: url("../img/tuna-tuna-tours.jpg");
+}
+.tour-4-v2{
+    background-color: white;
+    background-image: url("../img/tuna-tuna-tours-2.jpg");
 }
 .tour-5 {
     background-color: white;
@@ -187,6 +199,10 @@ h1{
 .tour-6 {
     background-color: white;
     background-image: url("../img/sun-rider-tours.jpg");
+}
+.tour-6-v2{
+    background-color: white;
+    background-image: url("../img/sun-rider-tours-2.jpeg");
 }
 .titulo-tour-container {
     width: 100%;
@@ -223,6 +239,12 @@ h1{
     border: 1px solid #95C0DF;
     padding: 1vh 1.5vw;
     padding-top: 1.2vh;
+    transition: 200ms;
+}
+.btn-vp:hover{  
+    background-color: #2F64DF;
+    border: 1px solid #91AABB;
+    box-shadow: 0px 0px 18px -3px rgba(0,0,0,0.75);
 }
 .backgroud-transparent {
     background-color: transparent;
@@ -304,9 +326,13 @@ h1{
     align-items: center;
     color: #1c4153;
 }
+
+.parallax-tours {
+    background-image: url("../img/parallax-tours.jpg");
+}
   .company-info{
       width: 50vw;
-      background-color: #ffd93252;
+      background-color: #32ffcc52;
       padding: 2rem;
       color: #000000;
       font-weight: bold;
@@ -325,9 +351,8 @@ h1{
 
 .min-tour-container {
     width: 85%;
-    height: 90vh;
+    height: 38rem;
     background-color: white;
-    background-image: url("../img/tours.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,7 +379,7 @@ h1{
     font-family: 'Permanent Marker', cursive;
     margin: 0;
     font-size: 35px;
-    padding: 2.5vh 0;
+    padding: 2.5vh 5px;
     color: white;
 }
 
@@ -386,11 +411,14 @@ h1{
     background-color: #304FAF;
     height: 10vh;
     text-align: center;    
-    margin: 5vh 0;
+    margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+}
+
+.mb{
+    margin-bottom: 15px;
 }
 
 .more-info h1{
@@ -414,6 +442,23 @@ h1{
     text-align: center;
     font-family: 'Caveat', cursive;
 
+}
+
+.btn-take-trip {
+    background-color: #6268EB;
+    border-radius: 5px;
+    border: 1px solid #9498F0;
+    padding: 1vh 1.5vw;
+    padding-top: 1.2vh;
+    transition: 500ms;
+}
+.btn-take-trip:hover{
+    background-color: #7A54DF;
+    box-shadow: 0px 0px 18px -3px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+.btn-take-trip-text{
+    font-family: 'Kaushan Script', cursive;
 }
 /* GALERIA */
 .gallery-background{
