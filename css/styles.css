@@ -491,6 +491,10 @@ article:hover {
 .contact-company p{
     margin-top: 0;
 }
+.contact-company i{
+    color: rgba(21, 100, 21, 0.842);
+    vertical-align: -0.1rem;
+}
 .map-container{
     background-color: #3f67ad18;
     padding-top: 1rem;
