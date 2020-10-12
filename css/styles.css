@@ -526,8 +526,8 @@ h1{
 }
 .btn-take-trip-text{
     font-family: 'Kaushan Script', cursive;
+    font-size: 20px;
 }
-
 
 /* GALERIA */
 .gallery-background{
@@ -659,26 +659,43 @@ textarea {
         columns: 2;
     }
 }
+
 @media (max-width: 480px) {
     .galeria {
         columns: 1;
     }
 }
+
 @media (max-width: 1100px){
     .nav-container a{
         font-family: 'Stylish', sans-serif; /*Tip0 de letra de la barra de navegación*/
         font-size: 20px;
     }
     .titulo-tours {
-        font-size: 23px;
+        font-size: 22px;
     }
 
     .info-tour, .price,.fas {
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .info-icons {
-        font-size: 12px;
+        font-size: 11px;
+    }
+    /*styles per tour*/
+    .tour-title-text {
+        font-size: 33px;
+    }
+
+    .tour-main-content{
+        font-size: 23px;
+    }
+
+    .more-info h1, .info-list{
+        font-size: 28px;
+    }
+    .btn-take-trip-text{
+        font-size: 18px;
     }
 }
 @media (max-width: 800px){
@@ -689,24 +706,11 @@ textarea {
 }
 
 @media (max-width: 1080px){
-    .offers-container {
-        columns: 2;
-    }
     .tour {
         height: 450px;
         width: 45vw;
     }
-    .titulo-tours {
-        font-size: 23px;
-    }
-
-    .info-tour, .price,.fas {
-        font-size: 18px;
-    }
     
-    .info-icons {
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 600px){
@@ -725,22 +729,19 @@ textarea {
 
 @media (max-width: 510px){
     .titulo-tours {
-        font-size: 19px;
+        font-size: 22px;
     }
 
     .info-tour, .price,.fas {
-        font-size: 14px;
+        font-size: 17px;
     }
     
     .info-icons {
-        font-size: 8px;
+        font-size: 11px;
     }
 }
 
 @media(max-width: 480px){
-    .offers-container {
-        columns: 1;
-    }
     .tour {
         height: 450px;
         width: 90vw;
