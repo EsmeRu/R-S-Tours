@@ -99,6 +99,21 @@ h1{
     pointer-events: none;
     cursor: default;
 }
+.nav-container a{
+    overflow: hidden;
+    margin-right: 3%;
+    font-style: oblique;
+    background: linear-gradient(to right, #000000, #036 50%, #EEEEEE 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    background-position: 100%;
+    transition: 275ms;
+}
+.nav-container a:hover{
+    background-position: 0 100%;
+}
 
 
 /* SLIDER DE FOTOS */
@@ -580,6 +595,7 @@ textarea {height: 10rem;}
         transition: 0.5s;
     }
     .overlay-content {
+        display: block;
         position: relative;
         top: 25%;
         width: 100%;
@@ -587,23 +603,29 @@ textarea {height: 10rem;}
         margin-top: 30px;
     }
     .overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
+        padding: 1rem;
+        font-size: 1.5rem;
         color: #818181;
         display: block;
-        transition: 0.3s;
+        transition: 0.2s;
     }
     .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
     .overlay .closebtn {
         position: absolute;
         top: 20px;
         right: 45px;
-        font-size: 60px;
     }
     .closebtn, .menu{
         opacity: 100%;
         pointer-events: initial;
+        display: flex;
+    }
+    .nav-container{
+        height: 4rem;
+    }
+    .menu i{
+        font-size: 2.5rem;
+        margin: .5rem .5rem 0;
     }
     .info-isla, .tour{min-width: 90%;}
 
