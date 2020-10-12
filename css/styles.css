@@ -499,17 +499,7 @@ article:hover {
     transition: .5s ease;
     filter: opacity(100%);
 }
-/* GALERIA RESPONSIVE */
-@media (max-width: 767px) { 
-    .galeria {
-        columns: 2;
-    }
-}
-@media (max-width: 480px) {
-    .galeria {
-        columns: 1;
-    }
-}
+
 
 /* CONTACTO */
 .contact-father{
@@ -594,4 +584,28 @@ textarea {
     background-color: rgba(13, 77, 13, 0.842);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     cursor: pointer;
+}
+
+/* GALERIA RESPONSIVE */
+@media (max-width: 767px) { 
+    .galeria {
+        columns: 2;
+    }
+}
+@media (max-width: 480px) {
+    .galeria {
+        columns: 1;
+    }
+}
+@media (max-width: 1100px){
+    .nav-container a{
+        font-family: 'Stylish', sans-serif; /*Tip0 de letra de la barra de navegación*/
+        font-size: 20px;
+    }
+}
+@media (max-width: 800px){
+    .nav-container a{
+        font-family: 'Stylish', sans-serif; /*Tip0 de letra de la barra de navegación*/
+        font-size: 15px;
+    }
 }
