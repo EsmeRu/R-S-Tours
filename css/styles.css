@@ -323,3 +323,53 @@ h1{
 .title-tour {
     font-family: 'Chilanka', cursive;
 }
+/* GALERIA */
+.gallery-background{
+    background-image: url("../img/fondo.png");
+}
+.galeria {
+    
+    margin: 1rem auto;
+    width:100%;
+    max-width: 80vw;
+    padding:0 1vw 2vw;
+    box-sizing: border-box;
+    column-count: 3;
+    /* Espacio entre columnas */
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+.galeria a {
+    color:#036;
+}
+article {
+    background:#fff;
+    border-radius:5px;
+    border:1px solid #ccc;
+    margin:0 0 20px 0;
+    text-align: center;
+    max-width: 100%;
+    filter: opacity(70%);
+    /*Evitamos que se corte al cambiar de columna*/
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+article img {
+    width:100%;
+}
+article:hover {
+    transition: .5s ease;
+    filter: opacity(100%);
+}
+/* GALERIA RESPONSIVE */
+@media (max-width: 767px) { 
+    .galeria {
+        columns: 2;
+    }
+}
+@media (max-width: 480px) {
+    .galeria {
+        columns: 1;
+    }
+}
