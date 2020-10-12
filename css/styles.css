@@ -150,11 +150,9 @@ h1{
     min-width: 90%;
 }
 .footer-container, .f-child{
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
-}
-.r-social a{
-    font-size: 3.5rem;
 }
   }
 
@@ -337,8 +335,8 @@ h1{
     flex: 0 1 calc(33.3% - 1rem);
 }
 .f-child img{
-    width: 15vw;
-    min-width: 20rem;
+    width: 25vw;
+    min-width: 17rem;
 }
 .f-child:nth-child(2){
     color: #ffffff;
