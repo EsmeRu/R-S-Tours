@@ -320,7 +320,7 @@ h1{
     display: flex;
     justify-content: center;    
     align-items: center;
-    margin: 0;    
+    margin: 0;
 }
 
 .min-tour-container {
@@ -340,6 +340,7 @@ h1{
     background-color: #74d2f27e;
     text-align: center;
     border-radius: 50px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .tour-title-container {    
@@ -350,7 +351,7 @@ h1{
 }
 
 .tour-title-text {
-    font-family: 'Chilanka', cursive;
+    font-family: 'Permanent Marker', cursive;
     margin: 0;
     font-size: 35px;
     padding: 2.5vh 0;
@@ -361,7 +362,6 @@ h1{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 6%;
 }
 
 .tour-main-content{
@@ -390,21 +390,30 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 .more-info h1{
     color: white;
     font-size: 30px;
     padding: 0;
+    font-family: 'Kaushan Script', cursive;
 }
 
 .list-container{
-    border-radius: ;
+    border: 3px solid #A8DAFF;
+    width: 50%;
+}
+
+.release-margin {
+    margin: 0;
 }
 
 .info-list {
     font-size: 30px;
     text-align: center;
+    font-family: 'Caveat', cursive;
+
 }
 /* GALERIA */
 .gallery-background{
