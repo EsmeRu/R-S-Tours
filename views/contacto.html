@@ -19,19 +19,21 @@
     <header class="header-container center">
         <div class="logo-container p-1">
             <div class="img-c">
-                <img src="../img/logo.png" alt="">
+                <img src="../img/logo.png">
             </div>
         </div>
         <div class="nav-container" id="navHeader">
-            <nav>
-                <ul>
-                    <li><a href="../index.html" class="nav">Inicio</a></li>
-                    <li><a href="./tours.html" class="nav">Tours</a></li>
-                    <li><a href="./contacto.html" class="nav">Contacto</a></li>
-                    <li><a href="./galeria.html" class="nav">Galeria</a></li>
-                    <li><a href="./nosotros.html" class="nav">Nosotros</a></li>
-                </ul>
-            </nav>
+            <nav id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="../index.html" class="nav">Inicio</a>
+                    <a href="./tours.html" class="nav">Tours</a>
+                    <a href="./contacto.html" class="nav">Contacto</a>
+                    <a href="./galeria.html" class="nav">Galeria</a>
+                    <a href="./nosotros.html" class="nav">Nosotros</a>
+                </div>
+              </nav>
+              <span class="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         </div>
     </header>
 

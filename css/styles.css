@@ -88,19 +88,11 @@ h1{
 .nav-container a:nth-child(even){
     margin: 0 5rem;
 }
-.nav-container a{
-    font-family: 'Stylish', sans-serif; /*Tip0 de letra de la barra de navegación*/
-}
-.closebtn{
+.closebtn, .menu{
     opacity: 0%;
     pointer-events: none;
     cursor: default;
 }
-.menu{
-    opacity: 0%;
-}
-
-
 @media screen and (max-width: 700px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
@@ -148,12 +140,9 @@ h1{
     right: 45px;
     font-size: 60px;
   }
-  .closebtn{
+  .closebtn, .menu{
     opacity: 100%;
     pointer-events: initial;
-}
-.menu{
-    opacity: 100%;
 }
   }
 
@@ -236,44 +225,37 @@ h1{
     border-width: 2px 2px;
     border-color: #CACACA;
 }
-.tour-1 {
+.tour-1, .tour-2, .tour-2-v2, .tour-3, .tour-3-v2, .tour-4, .tour-4-v2, .tour-5, .tour-6, .tour-6-v2{
     background-color: white;
+}
+.tour-1 {
     background-image: url("../img/tours.jpg");
 }
 .tour-2 {
-    background-color: white;
     background-image: url("../img/choya-tour.jpg");
 }
 .tour-2-v2{
-    background-color: white;
     background-image: url("../img/choya-tour-2.jpg");
 }
 .tour-3 {
-    background-color: white;
     background-image: url("../img/punta-baja-tours.jpg");
 }
 .tour-3-v2{
-    background-color: white;
     background-image: url("../img/punta-baja-tours-2.jpg");
 }
 .tour-4 {
-    background-color: white;
     background-image: url("../img/tuna-tuna-tours.jpg");
 }
 .tour-4-v2{
-    background-color: white;
     background-image: url("../img/tuna-tuna-tours-2.jpg");
 }
 .tour-5 {
-    background-color: white;
     background-image: url("../img/baja-des-tours.jpg");
 }
 .tour-6 {
-    background-color: white;
     background-image: url("../img/sun-rider-tours.jpg");
 }
 .tour-6-v2{
-    background-color: white;
     background-image: url("../img/sun-rider-tours-2.jpeg");
 }
 .titulo-tour-container {
