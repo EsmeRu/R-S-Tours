@@ -399,6 +399,10 @@ article:hover {
 .contact-company p{
     margin-top: 0;
 }
+.map-container{
+    background-color: #3f67ad18;
+    padding-top: 1rem;
+}
 .map iframe{
     border: 2px solid #000000;
     max-width: 1200px;
