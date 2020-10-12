@@ -64,6 +64,9 @@ h1{
     width: 30vw; /*Tamaño del logo*/
     min-width: 15rem;
 }
+
+
+
 /* BARRA DE NAVEGACIÓN */
 .nav-container{/*Contenedor de la barra de navegación*/
     background-color: #5888a3;
@@ -78,16 +81,74 @@ h1{
     box-shadow: 0px 2px 10px #000000;
     z-index: 1;
 }
-.nav-container ul{
+.overlay-content{
     display: flex;
     justify-content: center;
 }
-.nav-container ul li:nth-child(even){
+.nav-container a:nth-child(even){
     margin: 0 5rem;
 }
-.nav-container a{
-    font-family: 'Stylish', sans-serif; /*Tip0 de letra de la barra de navegación*/
+.closebtn, .menu{
+    opacity: 0%;
+    pointer-events: none;
+    cursor: default;
 }
+@media screen and (max-width: 700px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .closebtn, .menu{
+    opacity: 100%;
+    pointer-events: initial;
+}
+  }
+
+
+
+
 /* SLIDER DE FOTOS */
 .banner-container{
     position:relative;
@@ -164,44 +225,37 @@ h1{
     border-width: 2px 2px;
     border-color: #CACACA;
 }
-.tour-1 {
+.tour-1, .tour-2, .tour-2-v2, .tour-3, .tour-3-v2, .tour-4, .tour-4-v2, .tour-5, .tour-6, .tour-6-v2{
     background-color: white;
+}
+.tour-1 {
     background-image: url("../img/tours.jpg");
 }
 .tour-2 {
-    background-color: white;
     background-image: url("../img/choya-tour.jpg");
 }
 .tour-2-v2{
-    background-color: white;
     background-image: url("../img/choya-tour-2.jpg");
 }
 .tour-3 {
-    background-color: white;
     background-image: url("../img/punta-baja-tours.jpg");
 }
 .tour-3-v2{
-    background-color: white;
     background-image: url("../img/punta-baja-tours-2.jpg");
 }
 .tour-4 {
-    background-color: white;
     background-image: url("../img/tuna-tuna-tours.jpg");
 }
 .tour-4-v2{
-    background-color: white;
     background-image: url("../img/tuna-tuna-tours-2.jpg");
 }
 .tour-5 {
-    background-color: white;
     background-image: url("../img/baja-des-tours.jpg");
 }
 .tour-6 {
-    background-color: white;
     background-image: url("../img/sun-rider-tours.jpg");
 }
 .tour-6-v2{
-    background-color: white;
     background-image: url("../img/sun-rider-tours-2.jpeg");
 }
 .titulo-tour-container {
@@ -460,6 +514,8 @@ h1{
 .btn-take-trip-text{
     font-family: 'Kaushan Script', cursive;
 }
+
+
 /* GALERIA */
 .gallery-background{
     background-image: url("../img/fondo.png");
@@ -499,6 +555,7 @@ article:hover {
     transition: .5s ease;
     filter: opacity(100%);
 }
+
 
 
 /* CONTACTO */
