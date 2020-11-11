@@ -1,0 +1,80 @@
+html, body{
+    height: 100%;
+}
+body{
+    background-image: url("../img/sun-rider-tours-2.jpeg");
+    background-position: center;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.705);
+    max-width: 30rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.content {
+    display: block;
+    background-color: rgba(208, 212, 214, 0.24);
+    backdrop-filter: blur(2px);
+    padding: 2rem 4rem;
+}
+.image-logo{
+    background-image: url("../img/fondo.png");
+    text-align: center;
+    padding: 2rem 0 .5rem;
+}
+.image-logo img{
+    width: 8rem;
+    filter: opacity(80%)
+}
+.image-logo h2{
+    margin: 0;
+    font-family: monospace;
+    font-size: 2.5rem;
+    color: #000000;
+}
+input[type=e-mail], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 25px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #ffffffff;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #2f7733;
+  }
+  #signIn, #logIn{
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+      text-decoration: underline;
+      color: rgb(138, 0, 0);
+      font-weight: bold;
+  }
+  .hidden{
+      display: none;
+  }

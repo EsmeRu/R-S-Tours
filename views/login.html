@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>R&S TOURS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/styles-log.css">
+</head>
+<body id="body">
+
+    <div class="login">
+
+        <div class="container">
+            <div class="image-logo">
+                <img src="../img/logo1.png" alt="">
+                <h2>R&S TOURS</h2>
+            </div>
+            <form id="id01" class="content">
+                <label for="email"><b>Email</b></label>
+                <input id="email" type="e-mail" placeholder="@ejemplo.com" name="email" required>
+    
+                <label for="psw"><b>Password</b></label>
+                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+                    
+                <a id="signIn" href="#">Sign in</a>
+    
+                <button id="submitLog" type="submit">Login</button>
+            </form>
+
+            <form id="id02" class="content hidden">
+                <label for="email"><b>Email</b></label>
+                <input id="email" type="e-mail" placeholder="@ejemplo.com" name="email" required>
+    
+                <label for="psw"><b>Password</b></label>
+                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw"><b>Confirm Password</b></label>
+                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+                    
+                <a id="logIn" href="#">Log in</a>
+    
+                <button id="submitLog" type="submit">Sign In</button>
+            </form>
+
+        </div>
+        
+    </div>
+
+    <script src="../js/user.js"></script>
+
+</body>
+</html>
