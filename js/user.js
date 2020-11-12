@@ -1,39 +1,93 @@
-localStorage.clear(); /** Se limpian los datos almacenados */
-
-/** Se agregó un usuario de ejemplo para iniciar */
+/* Se agregó un usuario de ejemplo para iniciar 
 const allUsers = [{email: "usuario@ejemplo", password: "password"}];
-localStorage.setItem('users', JSON.stringify( allUsers ));
+localStorage.setItem('users', JSON.stringify( allUsers )); 
+*/
 
-$(document).ready( ()=> {
-	$('#logIn').click( () => {
-		document.getElementById('id01').style.display='block';
-		document.getElementById('id02').style.display='none';
-
-		$('#submitLog').click( () => {
-			const user= {
-				email: document.querySelector("#email").value,
-				password: document.querySelector("#password").value
-			}
-
-			const usersJSON = JSON.parse(localStorage.getItem('users'))
-			usersJSON.forEach(u => {
-				if(u.email == user.email || u.password == user.password){
-					sessionStorage.setItem('activeSession', JSON.stringify( user ))
-				}
-			})
-		})
-	})
-})
-
-$(document).ready( ()=>{
-	$('#signIn').click( () => {
-		document.getElementById('id02').style.display='block';
-		document.getElementById('id01').style.display='none';
-	})
+$('#logIn').click( () => {
+	showLogIn();
 	clearInput();
 })
 
+$('#submitLog').click( () => {
+	const logUserMail = document.querySelector("#email").value
+	const logUserPassword = document.querySelector("#passwordLogIn").value
+
+	const logedUser= {
+		email: logUserMail,
+		password: logUserPassword
+	}
+
+	for(var x = 0; x<localStorage.length; x++){
+		let searchingUser = 'user'+x;
+		const actualCompareUser = JSON.parse(localStorage.getItem('user0'))
+
+		console.log(actualCompareUser.email)
+
+		if(actualCompareUser.email == logedUser.email){
+			if(actualCompareUser.password == logedUser.password){
+				confirm('Usuario y contraseña encontrados');
+			} else {
+				alert("Contraseña incorrecta");
+			}
+		} else {
+			alert("Usuario no encontrado")
+		}
+	}
+
+	/*const usersJSON = JSON.parse(localStorage.getItem('users'))
+	usersJSON.forEach(u => {
+		if(u.email == user.email || u.password == user.password){
+			sessionStorage.setItem('activeSession', JSON.stringify( user ))
+		}
+	})*/
+})
+
+$('#signIn').click( () => {
+	showSingIn();
+	clearInput();
+})
+
+$('#submitSig').click( () => {
+	const newUserEmail = document.querySelector("#emailSign").value;
+	const newUserPassword = document.querySelector("#passwordSignIn").value;
+	const confirmPassword = document.querySelector("#confirmPassword").value;
+
+	if(newUserPassword === confirmPassword){
+		const newUser = [{
+			email: newUserEmail,
+			password: newUserPassword
+		}];
+
+		const newUserJSON = JSON.stringify(newUser);
+		localStorage.setItem(('user'+localStorage.length),newUserJSON);
+		confirm("Usuario registrado con éxito");
+	} else {
+		alert("Las contraseñas no coinciden");
+		document.querySelector('#passwordSignIn').value = "";
+		document.querySelector('#confirmPassword').value = "";
+		showSingIn();
+	}
+})
+
+const showSingIn = function () {
+	document.getElementById('formSigIn').style.display='block';
+	document.getElementById('formLogIn').style.display='none';
+}
+
+const showLogIn = function () {
+	document.getElementById('formLogIn').style.display='block';
+	document.getElementById('formSigIn').style.display='none';
+}
+
 const clearInput = () => {
 	document.querySelector('#email').value = "";
-    document.querySelector('#password').value = "";
+	document.querySelector('#emailSign').value = "";
+	document.querySelector('#passwordLogIn').value = "";
+	document.querySelector('#passwordSignIn').value = "";
+	document.querySelector('#confirmPassword').value = "";
+}
+
+
+const clearLocalStorage = function () {
+	localStorage.clear();
 }
