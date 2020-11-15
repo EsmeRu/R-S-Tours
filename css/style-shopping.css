@@ -1,0 +1,40 @@
+html, body{
+    height: 100%;
+}
+body{
+    background-image: url("../img/fondo.png");
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid rgb(204, 204, 204);
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .product-list{
+    flex: 0 0 calc(40% - 1rem);
+    border: 1px solid rgb(204, 204, 204);
+    padding: 2rem;
+  }
+  .image{
+      width: 350px;
+  }
+  .ejemplo{
+      display: flex;
+  }
+  .pay{
+    flex: 0 0 calc(30% - 1rem);
+    margin-left: 2rem;
+  }
