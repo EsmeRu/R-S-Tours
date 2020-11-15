@@ -1,26 +1,28 @@
 const allUsers = [];
+const usersJSON = JSON.parse(localStorage.getItem('users'))
 
 $('#logIn').click( () => {
 	showLogIn();
 	clearInput();
 })
 
+
 $('#submitLog').click( (e) => {
 	e.preventDefault();
 	
-	const logUserMail = document.querySelector("#email").value
-	const logUserPassword = document.querySelector("#passwordLogIn").value
+	const email = document.querySelector("#email").value
+	const password = document.querySelector("#passwordLogIn").value
 
 	const logedUser= {
-		email: logUserMail,
-		password: logUserPassword
+		email,
+		password
 	}
 	
 	if(localStorage.length != 0 && localStorage.getItem('users') != null){
-		const usersJSON = JSON.parse(localStorage.getItem('users'))
-		const validUser = usersJSON.find(u => u.email == logedUser.email && logedUser.password)
-		if(validUser != undefined){
+
+		if(usersJSON.find(u => u.email == logedUser.email && logedUser.password) != undefined){
 			sessionStorage.setItem('activeSession', JSON.stringify( logedUser ))
+			window.location.href="../index.html"
 			alert("Inicio correcto")
 		}
 		else{
@@ -35,24 +37,32 @@ $('#signIn').click( () => {
 })
 
 $('#submitSig').click( () => {
-	const newUserEmail = document.querySelector("#emailSign").value;
-	const newUserPassword = document.querySelector("#passwordSignIn").value;
+	const email = document.querySelector("#emailSign").value;
+	const password = document.querySelector("#passwordSignIn").value;
 	const confirmPassword = document.querySelector("#confirmPassword").value;
 
-	if(newUserPassword === confirmPassword){
+	if(password === confirmPassword){
 		const newUser = {
-			email: newUserEmail,
-			password: newUserPassword
+			email,
+			password
 		};
+
 		if((localStorage.getItem('users')) != null){
-			const usersJSON = JSON.parse(localStorage.getItem('users'))
-			console.log(usersJSON)
-			usersJSON.push(newUser);
-			localStorage.setItem('users', JSON.stringify(usersJSON));
+
+			if(usersJSON.find(u => u.email == newUser.email) == undefined){
+				console.log(usersJSON)
+				usersJSON.push(newUser);
+				localStorage.setItem('users', JSON.stringify(usersJSON));
+				alert("El usuario quedó registrado, inicie sesión")
+			}
+			else{
+				alert("El usuario ya esxiste");
+			}
 		}
 		else{
 			allUsers.push(newUser);
 			localStorage.setItem('users', JSON.stringify(allUsers));
+			alert("El usuario quedó registrado, inicie sesión")
 		}
 		showLogIn();
 	} else {
@@ -79,8 +89,4 @@ const clearInput = () => {
 	document.querySelector('#passwordLogIn').value = "";
 	document.querySelector('#passwordSignIn').value = "";
 	document.querySelector('#confirmPassword').value = "";
-}
-
-const clearLocalStorage = function () {
-	localStorage.clear();
 }
