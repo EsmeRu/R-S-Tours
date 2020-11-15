@@ -1,14 +1,13 @@
-/* Se agregó un usuario de ejemplo para iniciar 
-const allUsers = [{email: "usuario@ejemplo", password: "password"}];
-localStorage.setItem('users', JSON.stringify( allUsers )); 
-*/
+const allUsers = [];
 
 $('#logIn').click( () => {
 	showLogIn();
 	clearInput();
 })
 
-$('#submitLog').click( () => {
+$('#submitLog').click( (e) => {
+	e.preventDefault();
+	
 	const logUserMail = document.querySelector("#email").value
 	const logUserPassword = document.querySelector("#passwordLogIn").value
 
@@ -16,30 +15,18 @@ $('#submitLog').click( () => {
 		email: logUserMail,
 		password: logUserPassword
 	}
-
-	for(var x = 0; x<localStorage.length; x++){
-		let searchingUser = 'user'+x;
-		const actualCompareUser = JSON.parse(localStorage.getItem('user0'))
-
-		console.log(actualCompareUser.email)
-
-		if(actualCompareUser.email == logedUser.email){
-			if(actualCompareUser.password == logedUser.password){
-				confirm('Usuario y contraseña encontrados');
-			} else {
-				alert("Contraseña incorrecta");
-			}
-		} else {
-			alert("Usuario no encontrado")
+	
+	if(localStorage.length != 0 && localStorage.getItem('users') != null){
+		const usersJSON = JSON.parse(localStorage.getItem('users'))
+		const validUser = usersJSON.find(u => u.email == logedUser.email && logedUser.password)
+		if(validUser != undefined){
+			sessionStorage.setItem('activeSession', JSON.stringify( logedUser ))
+			alert("Inicio correcto")
 		}
-	}
-
-	/*const usersJSON = JSON.parse(localStorage.getItem('users'))
-	usersJSON.forEach(u => {
-		if(u.email == user.email || u.password == user.password){
-			sessionStorage.setItem('activeSession', JSON.stringify( user ))
+		else{
+			alert("Usuario o contraseña incorrecta")
 		}
-	})*/
+	}	
 })
 
 $('#signIn').click( () => {
@@ -53,14 +40,21 @@ $('#submitSig').click( () => {
 	const confirmPassword = document.querySelector("#confirmPassword").value;
 
 	if(newUserPassword === confirmPassword){
-		const newUser = [{
+		const newUser = {
 			email: newUserEmail,
 			password: newUserPassword
-		}];
-
-		const newUserJSON = JSON.stringify(newUser);
-		localStorage.setItem(('user'+localStorage.length),newUserJSON);
-		confirm("Usuario registrado con éxito");
+		};
+		if((localStorage.getItem('users')) != null){
+			const usersJSON = JSON.parse(localStorage.getItem('users'))
+			console.log(usersJSON)
+			usersJSON.push(newUser);
+			localStorage.setItem('users', JSON.stringify(usersJSON));
+		}
+		else{
+			allUsers.push(newUser);
+			localStorage.setItem('users', JSON.stringify(allUsers));
+		}
+		showLogIn();
 	} else {
 		alert("Las contraseñas no coinciden");
 		document.querySelector('#passwordSignIn').value = "";
@@ -86,7 +80,6 @@ const clearInput = () => {
 	document.querySelector('#passwordSignIn').value = "";
 	document.querySelector('#confirmPassword').value = "";
 }
-
 
 const clearLocalStorage = function () {
 	localStorage.clear();
