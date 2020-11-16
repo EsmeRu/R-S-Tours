@@ -1,5 +1,5 @@
 const allUsers = [];
-const usersJSON = JSON.parse(localStorage.getItem('users'))
+const usersJSON = JSON.parse(localStorage.getItem('users'));
 
 $('#logIn').click( () => {
 	showLogIn();
@@ -23,6 +23,7 @@ $('#submitLog').click( (e) => {
 		if(usersJSON.find(u => u.email == logedUser.email && logedUser.password) != undefined){
 			sessionStorage.setItem('activeSession', JSON.stringify( logedUser ))
 			window.location.href="../index.html"
+			toggleSessionButtons();
 			alert("Inicio correcto")
 		}
 		else{
