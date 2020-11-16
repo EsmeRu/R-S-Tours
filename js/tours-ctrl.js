@@ -1,20 +1,30 @@
 
-const templateCard = function ({ name, image, gender, species, episode }) {
-    return `<div class="card mb-5">
-                                    <duv class="card-img">
-                                        <img src="${image}" alt="">
-                                    </duv>
-                                    <div class="card-content">
-                                        <h3 class="card-header-title">${name}</h3>
-                                        <div class="content">
-                                            <ul>
-                                                <li class="list"><strong>Género: </strong>${gender}</li>
-                                                <li><strong>Especie: </strong>${species}</li>
-                                                <li><strong>Episodios: </strong>${episode}</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>`
+const templateCard = function ({ name, image, description, price, phone, web, email, buttonLink, styleImage }) {
+    return `<div class="tour ${styleImage}">
+                <div class="tour-content">
+                    <div class="titulo-tour-container">                            
+                        <h3 class="titulo-tours">${name}</h3>
+                    </div>                        
+                    <p class="info-tour">${description}</p>
+                    <p class="price">$${price}</p>
+
+                    <ul class="info-icons">
+                        <li>
+                            <i class="fas fa-phone-alt">&nbsp</i>
+                            <a href="#">${phone}</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe-americas">&nbsp</i>
+                            <a href="https://${web}">${web}</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope">&nbsp</i>
+                            <a>${email}</a>
+                        </li>
+                    </ul>
+                    <button class="btn-vp"><a href="${buttonLink}" class="backgroud-transparent">Ver más</a></button>
+                </div>
+            </div>`
 }
 
 const loadCards = function (allTours) {
@@ -28,10 +38,13 @@ const loadCards = function (allTours) {
             phone: r.phone,
             web: r.web,
             email: r.email,
-            buttonLink: r.button-link
+            buttonLink: r.button-link,
+            styleImage: r.styleImage
         }
+
 
         childs += templateCard(cardInformation)
     })
     return childs;
 }
+
