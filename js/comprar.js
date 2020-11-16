@@ -33,7 +33,7 @@ $(document).ready(function () {
         cardsContainer.html(loadCards(carritoLocal))
     }
     else{
-        cardsContainer.html(`<h1>No tienes productos en el carrito :c</h1>`);
+        cardsContainer.html(`<h1 style="height: 100vh;">No tienes productos en el carrito :c</h1>`);
     }
     
 });
