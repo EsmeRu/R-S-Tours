@@ -17,20 +17,27 @@ table {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+    height: 100vh;
   }
   .product-list{
-    flex: 0 0 calc(40% - 1rem);
-    border: 1px solid rgb(204, 204, 204);
-    height: 100vh;
-    padding: 2rem;
+    flex: 0 0 calc(50% - 3rem);
+    /* border: 1px solid rgb(204, 204, 204); */
   }
   .image-shop{
-      width: 250px;
+      width: 25vw;
   }
   .ejemplo{
       display: flex;
+      margin: 2rem;
   }
   .pay{
-    flex: 0 0 calc(30% - 1rem);
+    flex: 0 0 calc(30% - 3rem);
     margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+     .product-list, .pay{
+      margin: 1rem;
+      min-width: 80%;
+     }
   }
