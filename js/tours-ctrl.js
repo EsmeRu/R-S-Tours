@@ -54,4 +54,3 @@ $( document ).ready(function() {
     cardsContainer.html(loadCards(allToursJSON))
 });
 
-

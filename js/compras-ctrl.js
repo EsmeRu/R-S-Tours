@@ -1,24 +1,29 @@
-const carrito = [];
-const carritoJSON = JSON.parse(localStorage.getItem('cart'));
+let carrito = []
+const carritoLocal = JSON.parse(localStorage.getItem('buyCar'))
 
 $('#addCart').click( () => {
+    const titleLabel = document.getElementById("tourTitle").innerHTML
+    const toursData = JSON.parse(localStorage.getItem('tours-data'))
+    const tryToBuy = {}
 
-    const newBuy = {
-        id: id,
-        name: name,
-        image: image,
-        price: price
-    };
+    toursData.forEach(tour => {
+        if(tour.name === titleLabel){
+            tryToBuy.id = tour.id
+            tryToBuy.name = tour.name
+            tryToBuy.image = tour.image
+            tryToBuy.price = tour.price
+        }       
+    });
 
-    if((localStorage.getItem('cart')) != null){
-        carritoJSON.push(newBuy);
-        localStorage.setItem('cart', JSON.stringify(carritoJSON));
-        alert("Se añadió al carrito")
-    }
-    else{
-        carrito.push(newBuy);
-        localStorage.setItem('users', JSON.stringify(carrito));
-        alert("Se añadió al carrito")
+    if(carritoLocal != null){
+        console.log(carritoLocal)
+        carritoLocal.push(tryToBuy)        
+        localStorage.setItem('buyCar', JSON.stringify(carritoLocal))
+        alert("Tour añadido al carrito");
+    } else {
+        carrito.push(tryToBuy)
+        localStorage.setItem('buyCar', JSON.stringify(carrito));
+        alert("Tour añadido al carrito");
     }
   });
   

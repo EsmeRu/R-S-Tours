@@ -52,8 +52,7 @@ $('#submitSig').click( () => {
 							password: password
 						};
 				
-						if((localStorage.getItem('users')) != null){
-				
+						if((localStorage.getItem('users')) != null){				
 							if(usersJSON.find(u => u.email == newUser.email) == undefined){
 								console.log(usersJSON);
 								usersJSON.push(newUser);
