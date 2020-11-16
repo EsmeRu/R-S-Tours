@@ -7,19 +7,19 @@ $('#logIn').click( () => {
 })
 
 $('#submitLog').click( (e) => {
-	e.preventDefault();
-	
+	e.preventDefault();	
 	
 	const email = document.querySelector("#email").value
 	const password = document.querySelector("#passwordLogIn").value
-
-	const logedUser= {
-		email,
-		password
-	}
 	
 	if(localStorage.length != 0 && localStorage.getItem('users') != null){
+		const logedUser= {
+			name,
+			email,
+			password
+		}
 		if(usersJSON.find(u => u.email == logedUser.email && logedUser.password) != undefined){
+			logedUser.name = usersJSON.find(u => u.email == logedUser.email && logedUser.password).name;
 			sessionStorage.setItem('activeSession', JSON.stringify( logedUser ))
 			window.location.href="../index.html"
 			alert("Inicio correcto")
