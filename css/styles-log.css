@@ -45,6 +45,7 @@ body{
     color: #000000;
 }
 input[type=email], input[type=password],input[type=text] {
+    outline: none;
     width: 100%;
     padding: 12px 20px;
     margin: 5px 0;

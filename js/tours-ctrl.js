@@ -4,7 +4,7 @@ const templateCard = function ({ name, image, description, price, phone, web, em
                     <div class="titulo-tour-container">                            
                         <h3 class="titulo-tours" style="margin-bottom: 15px;">${name}</h3>
                     </div>
-                    <img src= ${image} style="width: 25vw; height: 25vh; object-fit: cover;">                        
+                    <img src= ${image} style="width: 300px; height: 300px; object-fit: cover;">                        
                     <p class="info-tour">${description}</p>
                     <p class="price">$${price}</p>
 
