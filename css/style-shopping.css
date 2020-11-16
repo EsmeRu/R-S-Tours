@@ -1,16 +1,10 @@
-html, body{
-    height: 100%;
-}
 body{
     background-image: url("../img/fondo.png");
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 table {
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid rgb(204, 204, 204);
+    border: 2px solid rgb(204, 204, 204);
   }
   
   th, td {
@@ -18,18 +12,20 @@ table {
     padding: 10px;
   }
 
-  .container{
+  .container-shop{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
   }
   .product-list{
     flex: 0 0 calc(40% - 1rem);
     border: 1px solid rgb(204, 204, 204);
+    height: 100vh;
     padding: 2rem;
   }
-  .image{
-      width: 350px;
+  .image-shop{
+      width: 250px;
   }
   .ejemplo{
       display: flex;

@@ -567,7 +567,7 @@ textarea {height: 10rem;}
     height: 2.5rem;
     background-color: rgb(13, 77, 13);
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     color: #ffffff;
     transition: 400ms;
 }

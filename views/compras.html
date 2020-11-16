@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R&S TOURS</title>
 
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/style-shopping.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
 </head>
 <body>
-    <div class="container">
+
+    <header class="header-container center">
+        <div class="logo-container p-1">
+            <div class="img-c">
+                <img src="../img/logo.png">
+            </div>
+        </div>
+        <div class="nav-container" id="navHeader">
+            <nav id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="far fa-times-circle"></i></a>
+                <div class="overlay-content">
+                    <a href="../index.html" class="nav">Inicio</a>
+                    <a href="../views/tours.html" class="nav">Tours</a>
+                    <a href="../views/contacto.html" class="nav">Contacto</a>
+                    <a href="../views/galeria.html" class="nav">Galeria</a>
+                    <a href="../views/nosotros.html" class="nav">Nosotros</a>
+                    <a href="../views/login.html" class="nav">Iniciar Sesión</a>
+                </div>
+              </nav>
+              <span class="menu" style="cursor:pointer;" onclick="openNav()"><i class="fas fa-bars"></i></span>
+        </div>
+    </header>
+
+
+    <div class="container-shop">
         <div class="product-list">
             <div class="ejemplo">
-                <img class="image" src="../img/punta-baja-tours-2.jpg" alt="punta baja tours">
+                <img class="image-shop" src="../img/punta-baja-tours-2.jpg" alt="punta baja tours">
                 <div class="info-product">
                     <ul>
                         <li>Punta Baja Tours</li>
@@ -25,6 +53,7 @@
             <table>
                 <tr>
                     <th>Resumen</th>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Subtotal</td>
@@ -39,7 +68,32 @@
                     <td><strong>$0.00</strong></td>
                 </tr>
             </table>
+            <button class="btn-submit">Comprar</button>
         </div>
     </div>
+
+
+</main>
+<footer class="footer-container">
+    <div class="f-child">
+        <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+    <div class="f-child center">
+        <p><i class="fad fa-tree-palm"></i>La Pah, Baja California Suuuuuuur!.</i></p>
+    </div>
+    <div class="r-social f-child">
+        <ul class="list-style-none">
+            <li>
+                <a href="https://www.facebook.com/" target="_blank" class="fb fab fa-facebook-square"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/" target="_blank" class="tw fab fa-twitter-square"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank" class="ig fab fa-instagram"></a>
+            </li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
