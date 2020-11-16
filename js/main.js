@@ -1,3 +1,12 @@
+/** AÑADIR AL CARRITO */
+$('#addCart').click( () => {
+
+  
+
+  alert("Se añadió al carrito")
+});
+
+
 /* HEADER - BARRA DE NAVEGACIÓN */
 // POSISIÓN FIJADA
 window.onscroll = function() {navFunction()};
@@ -36,3 +45,4 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 5000); // Change image every 2 seconds
 }
+
