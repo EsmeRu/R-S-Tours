@@ -1,12 +1,3 @@
-/** AÑADIR AL CARRITO */
-$('#addCart').click( () => {
-
-  
-
-  alert("Se añadió al carrito")
-});
-
-
 /* HEADER - BARRA DE NAVEGACIÓN */
 // POSISIÓN FIJADA
 window.onscroll = function() {navFunction()};
