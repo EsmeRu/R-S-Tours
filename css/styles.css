@@ -94,6 +94,9 @@ h1{
 .nav-container a:nth-child(even){
     margin: 0 3rem;
 }
+.nav-container a:last-child {
+    margin: 0 3rem;
+}
 .closebtn, .menu{
     opacity: 0%;
     pointer-events: none;

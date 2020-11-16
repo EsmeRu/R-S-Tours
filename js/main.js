@@ -4,8 +4,6 @@ window.onscroll = function() {navFunction()};
 
 const header = document.getElementById("navHeader");
 const sticky = header.offsetTop;
-const navIniciarSesion = document.getElementById("iniciarSesion");
-const navCerrarSesion = document.getElementById("cerrarSesion");
 
 function navFunction() {
   if (window.pageYOffset > sticky) {
@@ -39,11 +37,14 @@ function carousel() {
   setTimeout(carousel, 5000); // Change image every 2 seconds
 }
 
-const toggleSessionButtons = function(){
-
-
-  localStorage.setItem("navInicarSesion",navIniciarSesion);
-
-  navIniciarSesion.classList.add("hidden")
-	navCerrarSesion.classList.toggle("hidden");
+if(sessionStorage.getItem('activeSession')){
+  document.getElementById("iniciarSesion").classList.add("hidden");
+  document.getElementById("cerrarSesion").classList.remove("hidden");
+} else {
+  document.getElementById("iniciarSesion").classList.remove("hidden");
+  document.getElementById("cerrarSesion").classList.add("hidden");
 }
+
+document.getElementById("cerrarSesion").addEventListener("click", () =>{
+  sessionStorage.removeItem('activeSession');
+})

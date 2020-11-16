@@ -6,6 +6,9 @@ $('#logIn').click( () => {
 	clearInput();
 })
 
+$("#iniciarSesion").click( (e) => {
+	e.classList.toggle("hidden")
+})
 
 $('#submitLog').click( (e) => {
 	e.preventDefault();
