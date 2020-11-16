@@ -1,10 +1,10 @@
-
-const templateCard = function ({ name, image, description, price, phone, web, email, buttonLink, styleImage }) {
-    return `<div class="tour ${styleImage}">
+const templateCard = function ({ name, image, description, price, phone, web, email, buttonLink }) {
+    return `<div class="tour">
                 <div class="tour-content">
                     <div class="titulo-tour-container">                            
-                        <h3 class="titulo-tours">${name}</h3>
-                    </div>                        
+                        <h3 class="titulo-tours" style="margin-bottom: 15px;">${name}</h3>
+                    </div>
+                    <img src= ${image} style="width: 25vw; height: 25vh; object-fit: cover;">                        
                     <p class="info-tour">${description}</p>
                     <p class="price">$${price}</p>
 
@@ -27,9 +27,9 @@ const templateCard = function ({ name, image, description, price, phone, web, em
             </div>`
 }
 
-const loadCards = function (allTours) {
+const loadCards = function (allToursJSON) {
     let childs = "";
-    results.forEach(r => {
+    allToursJSON.forEach(r => {
         const cardInformation = {
             name: r.name,
             image: r.image,
@@ -38,13 +38,20 @@ const loadCards = function (allTours) {
             phone: r.phone,
             web: r.web,
             email: r.email,
-            buttonLink: r.button-link,
+            buttonLink: r.buttonLink,
             styleImage: r.styleImage
         }
-
-
         childs += templateCard(cardInformation)
     })
     return childs;
 }
+
+$( document ).ready(function() {
+    const cardsContainer = $("#allOffersContainer");
+	cardsContainer.html("");
+
+    const allToursJSON = JSON.parse(localStorage.getItem('tours-data'))
+    cardsContainer.html(loadCards(allToursJSON))
+});
+
 
