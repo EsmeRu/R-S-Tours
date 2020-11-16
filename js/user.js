@@ -6,12 +6,9 @@ $('#logIn').click( () => {
 	clearInput();
 })
 
-$("#iniciarSesion").click( (e) => {
-	e.classList.toggle("hidden")
-})
-
 $('#submitLog').click( (e) => {
 	e.preventDefault();
+	
 	
 	const email = document.querySelector("#email").value
 	const password = document.querySelector("#passwordLogIn").value
@@ -22,11 +19,9 @@ $('#submitLog').click( (e) => {
 	}
 	
 	if(localStorage.length != 0 && localStorage.getItem('users') != null){
-
 		if(usersJSON.find(u => u.email == logedUser.email && logedUser.password) != undefined){
 			sessionStorage.setItem('activeSession', JSON.stringify( logedUser ))
 			window.location.href="../index.html"
-			toggleSessionButtons();
 			alert("Inicio correcto")
 		}
 		else{
@@ -41,39 +36,57 @@ $('#signIn').click( () => {
 })
 
 $('#submitSig').click( () => {
-	const email = document.querySelector("#emailSign").value;
-	const password = document.querySelector("#passwordSignIn").value;
-	const confirmPassword = document.querySelector("#confirmPassword").value;
+	const name = document.getElementById("name").value;
+	const email = document.getElementById("emailSign").value;
+	const password = document.getElementById("passwordSignIn").value;
+	const confirmPassword = document.getElementById("confirmPassword").value;
 
-	if(password === confirmPassword){
-		const newUser = {
-			email,
-			password
-		};
-
-		if((localStorage.getItem('users')) != null){
-
-			if(usersJSON.find(u => u.email == newUser.email) == undefined){
-				console.log(usersJSON)
-				usersJSON.push(newUser);
-				localStorage.setItem('users', JSON.stringify(usersJSON));
-				alert("El usuario quedó registrado, inicie sesión")
+	if(name != ""){
+		if(email != ""){
+			if(password != "") {
+				if(confirmPassword != ""){
+					if(password === confirmPassword){		
+						const newUser = {
+							name: name,
+							email: email,
+							password: password
+						};
+				
+						if((localStorage.getItem('users')) != null){
+				
+							if(usersJSON.find(u => u.email == newUser.email) == undefined){
+								console.log(usersJSON);
+								usersJSON.push(newUser);
+								localStorage.setItem('users', JSON.stringify(usersJSON));
+								alert("El usuario quedó registrado, inicie sesión");
+								showLogIn();
+							}
+							else{
+								alert("El usuario ya esxiste");
+							}
+						}
+						else{
+							allUsers.push(newUser);
+							localStorage.setItem('users', JSON.stringify(allUsers));
+							alert("El usuario quedó registrado, inicie sesión");
+							showLogIn();
+						}		
+					} else {
+						alert("Las contraseñas no coinciden");
+						document.querySelector('#confirmPassword').value = "";
+						showSingIn();
+					}
+				} else {
+					alert("Por favor confirme su contraseña");
+				}
+			} else {
+				alert("El campo Contraseña no puede quedar vacío");
 			}
-			else{
-				alert("El usuario ya esxiste");
-			}
+		} else {
+			alert("El campo Email no puede quedar vacío");
 		}
-		else{
-			allUsers.push(newUser);
-			localStorage.setItem('users', JSON.stringify(allUsers));
-			alert("El usuario quedó registrado, inicie sesión")
-		}
-		showLogIn();
 	} else {
-		alert("Las contraseñas no coinciden");
-		document.querySelector('#passwordSignIn').value = "";
-		document.querySelector('#confirmPassword').value = "";
-		showSingIn();
+		alert("El campo Nombre no puede quedar vacío");
 	}
 })
 

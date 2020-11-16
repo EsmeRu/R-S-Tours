@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>R&S TOURS</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/styles-log.css">
 </head>
 <body id="body">
 
-    <div class="login">
-
-        <div class="container">
+    <div class="login">        
+        <div class="container">                    
             <div class="image-logo">
+                <div class="back-arrow">
+                    <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+                </div>              
                 <img src="../img/logo1.png" alt="">
                 <h2>R&S TOURS</h2>
             </div>
             <form id="formLogIn" class="content">
                 <label for="email"><b>Email</b></label>
-                <input autocomplete="off" id="email" type="e-mail" placeholder="@ejemplo.com" name="email" required>
+                <input autocomplete="off" id="email" type="email" placeholder="@ejemplo.com" name="email" required>
     
                 <label for="psw"><b>Password</b></label>
                 <input autocomplete="off" id="passwordLogIn" type="password" placeholder="Enter Password" name="psw" required>
@@ -29,8 +32,11 @@
             </form>
 
             <form id="formSigIn" class="content hidden">
+                <label for="name"><b>Nombre Completo</b></label>
+                <input type="text" autocomplete="off" id="name" placeholder="Nombre Apellido" name="name" required>
+
                 <label for="email"><b>Email</b></label>
-                <input autocomplete="off" id="emailSign" type="e-mail" placeholder="correo@ejemplo.com" name="email" required>
+                <input autocomplete="off" id="emailSign" type="email" placeholder="correo@ejemplo.com" name="email" required>
     
                 <label for="psw"><b>Password</b></label>
                 <input autocomplete="off" id="passwordSignIn" type="password" placeholder="Enter Password" name="psw" required>
