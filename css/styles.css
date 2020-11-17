@@ -94,6 +94,11 @@ h1{
 .nav-container a:nth-child(even){
     margin: 0 3rem;
 }
+
+#cerrarSesion, #shopingCar {
+    margin: 0 3rem;
+}
+
 .nav-container a:last-child {
     margin: 0 3rem;
 }
@@ -287,6 +292,9 @@ h1{
     font-size: 20px;
 }
 
+.fa-bars {
+    font-size: 30px;
+}
 
 /* FOOTER */
 .footer-container{

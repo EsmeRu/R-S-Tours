@@ -2,9 +2,11 @@
 if(sessionStorage.getItem('activeSession')){
   document.getElementById("iniciarSesion").classList.add("hidden");
   document.getElementById("cerrarSesion").classList.remove("hidden");
+  document.getElementById("shopingCar").classList.remove("hidden");
 } else {
   document.getElementById("iniciarSesion").classList.remove("hidden");
   document.getElementById("cerrarSesion").classList.add("hidden");
+  document.getElementById("shopingCar").classList.add("hidden");
 }
 
 document.getElementById("cerrarSesion").addEventListener("click", () =>{
