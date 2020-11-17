@@ -23,12 +23,17 @@ th, td {
   }
   .image-shop{
       width: 20vw;
+      object-fit: cover;
   }
   .item{
     display: flex;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid rgb(204, 204, 204);
+  }
+  .btn-delete{
+    width: 5rem!important;
+    align-items: center;
   }
   .pay{
     flex: 0 0 calc(30% - 3rem);
