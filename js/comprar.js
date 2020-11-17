@@ -26,6 +26,24 @@ const loadCards = function (carritoLocal) {
     return childs;
 }
 
+const calculateTotal = function() {
+    const shopingJSON = JSON.parse(localStorage.getItem('buyCar'));
+    const totalLabel = document.getElementById("total")
+    const subTotalLabel = document.getElementById("subtotal")
+    const shipmentDutyLabel = document.getElementById("shipment-duty")
+
+    var subTotal = 0
+    shopingJSON.forEach(tours => {
+        subTotal = subTotal + Number.parseInt(tours.price)
+    }); 
+    var shipmenDuty = subTotal * 0.15
+    var total = subTotal + shipmenDuty
+
+    totalLabel.innerHTML = "$" + total
+    subTotalLabel.innerHTML = "$" + subTotal
+    shipmentDutyLabel.innerHTML = "$" + shipmenDuty
+}
+
 const reloadCards = function() {
     const cardsContainer = $("#shoppingList");
     if (carritoLocal != null){
@@ -64,9 +82,23 @@ const reloadCards = function() {
             localStorage.setItem('buyCar',JSON.stringify(shopingJSON))
 
             parentContainerDiv.removeChild(parentDivItems);
+            calculateTotal();
         })
     })
+    calculateTotal();
 }
+
+$('#comprarTodo').click(() => {
+    if(localStorage.getItem('buyCar') != undefined){
+        localStorage.removeItem('buyCar')
+        alert("Gracias por comprar en R&S Tours")
+        location.reload()
+    } else {
+        alert("Parece que no tienes nada en el carrito, ve a la sección de Tours para añadir productos")
+    }
+    
+})
+
 
 $(document).ready(function () {
     reloadCards();
